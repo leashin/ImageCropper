@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * 
- * leashin: ÐÞ¸Ä³ÉÍ·ÏñÇÐ¸î¿Ø¼þ
+ * leashin: åŠ å…¥é€‰æ¡†åˆ‡å‰²åŠŸèƒ½
  *******************************************************************************/
 package com.leashin.imagecropper;
 
@@ -152,7 +152,7 @@ public class ImageCropperAttacher implements ICropper, View.OnTouchListener,
 	private final float[] mMatrixValues = new float[9];
 
 	/**
-	 * Ñ¡Çø¿ò
+	 * Ñ¡ï¿½ï¿½ï¿½
 	 */
 	private final RectF mCropperRect = new RectF();
 
@@ -179,7 +179,7 @@ public class ImageCropperAttacher implements ICropper, View.OnTouchListener,
 	private boolean mCropperSizeChanged = false;
 
 	/**
-	 * ±ß¿òºáÏòµÄ±ß¾à
+	 * ï¿½ß¿ï¿½ï¿½ï¿½ï¿½Ä±ß¾ï¿½
 	 */
 	private float mCropperMargin = 0f;
 	private static final float CROPPER_MARGIN = 16f;
@@ -445,14 +445,14 @@ public class ImageCropperAttacher implements ICropper, View.OnTouchListener,
 			float cropperWidth = viewWidth - mCropperMargin;
 			float cropperHeight = viewHeight - mCropperMargin;
 
-			// ÎªÊ¹¿ò¿òÄÜ·ÅÏÂ£¬ÒÔ¶ÌµÄÒ»±ßÎª±ê×¼È¡Öµ
+			// ÎªÊ¹ï¿½ï¿½ï¿½ï¿½Ü·ï¿½ï¿½Â£ï¿½ï¿½Ô¶Ìµï¿½Ò»ï¿½ï¿½Îªï¿½ï¿½×¼È¡Öµ
 			if (cropperWidth <= cropperHeight && !mCropperSizeChanged) {
 				mBorderHorizontalMargin = mCropperMargin;
-				// µÃµ½ÊúÏòµÄ±ß±ß¾à
+				// ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½Ä±ß±ß¾ï¿½
 				mBorderVerticalMargin = (viewHeight - (viewWidth - 2 * mBorderHorizontalMargin)) / 2;
 			} else {
 				mBorderVerticalMargin = mCropperMargin;
-				// µÃµ½ºáÏòµÄ±ß±ß¾à
+				// ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½Ä±ß±ß¾ï¿½
 				mBorderHorizontalMargin = (viewWidth - (viewHeight - 2 * mBorderVerticalMargin)) / 2;
 			}
 
@@ -471,17 +471,17 @@ public class ImageCropperAttacher implements ICropper, View.OnTouchListener,
 			final float imageHeight = imageView.getDrawable()
 					.getIntrinsicHeight();
 
-			// Ç¿ÖÆÊ¹ÓÃcenterCropÊôÐÔ£¬ÏÈ¼ÆÊ±³öÊµ¼ÊÉÏattchÐèÒªµÄËõ·Å±È
+			// Ç¿ï¿½ï¿½Ê¹ï¿½ï¿½centerCropï¿½ï¿½ï¿½Ô£ï¿½ï¿½È¼ï¿½Ê±ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½attchï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½Å±ï¿½
 			float displayWidthScale = viewWidth / imageWidth;
 			float displayHeightScale = viewHeight / imageHeight;
 			float displayScale = Math
 					.max(displayWidthScale, displayHeightScale);
 
-			// attchÊ¹ÓÃcenterCropÊ±ÏÔÊ¾Ëõ·Å±ÈÎª1fµÄ¿í¸ú¸ß
+			// attchÊ¹ï¿½ï¿½centerCropÊ±ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½Å±ï¿½Îª1fï¿½Ä¿ï¿½ï¿½ï¿½
 			mInitWidth = imageWidth * displayScale;
 			mInitHeight = imageHeight * displayScale;
 
-			// ÐèÒªËõ·Åµ½¸úÑ¡Çø´óÐ¡µÄËõ·Å±È
+			// ï¿½ï¿½Òªï¿½ï¿½ï¿½Åµï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½Å±ï¿½
 			float cropperWidthScale = (float) mCropperRect.width() / mInitWidth;
 			float cropperHeightScale = (float) mCropperRect.height()
 					/ mInitHeight;
@@ -537,7 +537,7 @@ public class ImageCropperAttacher implements ICropper, View.OnTouchListener,
 		float minWidth = mInitWidth * mMinScale;
 		float minHeight = mInitHeight * mMinScale;
 
-		// ¿ØÖÆËõ·Å±¶ÂÊ£¬²»ÄÜ³¬¹ý×îÐ¡»ò×î´ó¿í¸ß
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å±ï¿½ï¿½Ê£ï¿½ï¿½ï¿½ï¿½Ü³ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		if (scaleFactor * currentWidth >= maxWidth
 				|| scaleFactor * currentHeight >= maxHeight) {
 			scaleFactor = maxWidth / currentWidth;
@@ -825,7 +825,7 @@ public class ImageCropperAttacher implements ICropper, View.OnTouchListener,
 			deltaY = mCropperRect.top - rect.top;
 		}
 
-		// Êµ¼ÊÉÏÄÜÆ«ÒÆµÄ×ø±ê
+		// Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ«ï¿½Æµï¿½ï¿½ï¿½ï¿½
 		mSuppMatrix.postTranslate(deltaX, deltaY);
 		return true;
 	}
@@ -1182,17 +1182,17 @@ public class ImageCropperAttacher implements ICropper, View.OnTouchListener,
 	}
 
 	/**-
-	 * °´ÕÕÒÔÏÂÇøÓò»æÖÆ±³¾°ÕÚ¸Ç²ã
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ±ï¿½ï¿½ï¿½ï¿½Ú¸Ç²ï¿½
 	-------------------------------------
-	|                 ÉÏ                                                          |
+	|                 ï¿½ï¿½                                                          |
 	-------------------------------------
 	|      |                    |       |
 	|      |                    |       |
-	|   ×ó      |                    |    ÓÒ      |
+	|   ï¿½ï¿½      |                    |    ï¿½ï¿½      |
 	|      |                    |       |
 	|      |                    |       |
 	-------------------------------------
-	|              ÏÂ                                                                     |
+	|              ï¿½ï¿½                                                                     |
 	-------------------------------------
 	 */
 	private void drawBackground(Canvas canvas) {
@@ -1200,7 +1200,7 @@ public class ImageCropperAttacher implements ICropper, View.OnTouchListener,
 		int width = imageView.getWidth();
 		int height = imageView.getHeight();
 
-		// ÉÏÏÂ×óÓÒ
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		canvas.drawRect(0, 0, width, mBorderVerticalMargin, mBackgroundPaint);
 		canvas.drawRect(0, height - mBorderVerticalMargin, width, height,
 				mBackgroundPaint);
@@ -1211,7 +1211,7 @@ public class ImageCropperAttacher implements ICropper, View.OnTouchListener,
 	}
 
 	/**
-	 * »­¿ò¿ò
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * @param canvas
 	 */
 	private void drawBorder(Canvas canvas) {
@@ -1219,18 +1219,18 @@ public class ImageCropperAttacher implements ICropper, View.OnTouchListener,
 		int width = imageView.getWidth();
 		int height = imageView.getHeight();
 
-		// ×ó±ßÊúÏß
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		canvas.drawLine(mBorderHorizontalMargin, mBorderVerticalMargin,
 				mBorderHorizontalMargin, height - mBorderVerticalMargin,
 				mCropperPaint);
-		// ÓÒ±ßÊúÏß
+		// ï¿½Ò±ï¿½ï¿½ï¿½ï¿½ï¿½
 		canvas.drawLine(width - mBorderHorizontalMargin, mBorderVerticalMargin,
 				width - mBorderHorizontalMargin,
 				height - mBorderVerticalMargin, mCropperPaint);
-		// ÉÏÃæÊúÏß
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		canvas.drawLine(mBorderHorizontalMargin, mBorderVerticalMargin, width
 				- mBorderHorizontalMargin, mBorderVerticalMargin, mCropperPaint);
-		// ÏÂÃæÊúÏß
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		canvas.drawLine(mBorderHorizontalMargin,
 				height - mBorderVerticalMargin,
 				width - mBorderHorizontalMargin,
@@ -1255,8 +1255,8 @@ public class ImageCropperAttacher implements ICropper, View.OnTouchListener,
 	}
 
 	/**
-	 * µÃµ½ÔÚÍ¼Æ¬ÇÐ¸î¿òÖÐÏÔÊ¾µÄ²¿·ÖµÄ×ø±ê
-	 * @return ÏÔÊ¾²¿·ÖµÄ¾ØÐÎ¿ò
+	 * ï¿½Ãµï¿½ï¿½ï¿½Í¼Æ¬ï¿½Ð¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½Ä²ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½
+	 * @return ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ÖµÄ¾ï¿½ï¿½Î¿ï¿½
 	 */
 	private RectF getCropImageRectF() {
 		RectF cropperRect = mCropperRect;
@@ -1272,47 +1272,47 @@ public class ImageCropperAttacher implements ICropper, View.OnTouchListener,
 		float displayRight = displayRect.right;
 		float displayBottom = displayRect.bottom;
 
-		// ÔÚÑ¡¿òÇøÓòÄÚµÄÍ¼Ïñ×ø±ê
+		// ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½
 		float bitmapLeft = 0;
 		float bitmapTop = 0;
 		float bitmapRight = 0;
 		float bitmapBottom = 0;
 
-		// Ã»ÓÐÈÎºÎ²¿´¦ÓÚ¿ò¿òÄÚ
+		// Ã»ï¿½ï¿½ï¿½ÎºÎ²ï¿½ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ï¿½
 		if (displayLeft > cropperRight || displayTop > cropperBottom
 				|| displayRight < cropperLeft || displayBottom < cropperTop) {
 			return null;
 		}
 
-		// ×ó±ß½ç´¦Àí
+		// ï¿½ï¿½ß½ç´¦ï¿½ï¿½
 		if (displayLeft <= cropperLeft) {
 			bitmapLeft = cropperLeft - displayLeft;
 		} else {
 			bitmapLeft = 0;
 		}
 
-		// ÉÏ±ß½ç´¦Àí
+		// ï¿½Ï±ß½ç´¦ï¿½ï¿½
 		if (displayTop <= cropperTop) {
 			bitmapTop = cropperTop - displayTop;
 		} else {
 			bitmapTop = 0;
 		}
 
-		// ÓÒ±ß½ç´¦Àí
+		// ï¿½Ò±ß½ç´¦ï¿½ï¿½
 		if (displayRight <= cropperRight) {
 			bitmapRight = displayRect.width();
 		} else {
 			bitmapRight = cropperRight - displayLeft;
 		}
 
-		// ÏÂ±ß´¦Àí
+		// ï¿½Â±ß´ï¿½ï¿½ï¿½
 		if (displayBottom <= cropperBottom) {
 			bitmapBottom = displayRect.height();
 		} else {
 			bitmapBottom = cropperBottom - displayTop;
 		}
 
-		// µÃµ½ÏÔÊ¾²¿·ÖµÄ¾ØÐÎ¿ò
+		// ï¿½Ãµï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ÖµÄ¾ï¿½ï¿½Î¿ï¿½
 		RectF rf = new RectF(bitmapLeft, bitmapTop, bitmapRight, bitmapBottom);
 
 		return rf;

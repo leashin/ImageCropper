@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * 
- * leashin: 修改成头像切割控件
+ * leashin: 鍔犲叆閫夋鍒囧壊鍔熻兘
  *******************************************************************************/
 package com.leashin.imagecropper;
 

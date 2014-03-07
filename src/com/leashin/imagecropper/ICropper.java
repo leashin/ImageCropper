@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * 
- * leashin: ĞŞ¸Ä³ÉÍ·ÏñÇĞ¸î¿Ø¼ş
+ * leashin: ä¿®æ”¹æˆå¤´åƒåˆ‡å‰²æ§ä»¶
  *******************************************************************************/
 package com.leashin.imagecropper;
 
@@ -174,25 +174,25 @@ public interface ICropper {
 	void setPhotoViewRotation(float rotationDegree);
 
 	/**
-	 * »æÖÆÑ¡È¡¿ò
+	 * ç»˜åˆ¶é€‰å–æ¡†
 	 * @param canvas
 	 */
 	void drawCropper(Canvas canvas);
 
 	/**
-	 * µÃµ½Ñ¡ÇøÄÚµÄbitmap
-	 * @return Ñ¡ÇøÖĞµÄbitmap
+	 * å¾—åˆ°é€‰åŒºå†…çš„bitmap
+	 * @return é€‰åŒºä¸­çš„bitmap
 	 */
 	Bitmap getCropImage();
 
 	/**
-	 * ±ß¿òµÄ±ß¾àÖµÉèÖÃ,»á¸²¸ÇsetCropperSize·½·¨
-	 * @param margin ±ß¾àÖµ
+	 * è¾¹æ¡†çš„è¾¹è·å€¼è®¾ç½®,ä¼šè¦†ç›–setCropperSizeæ–¹æ³•
+	 * @param margin è¾¹è·å€¼
 	 */
 	void setCropperMargin(float margin);
 
 	/**
-	 * Ñ¡Çø¿òµÄ´óĞ¡£¬¾ÓÖĞÏÔÊ¾£¬¸²¸ÇsetCropperMargin·½·¨
+	 * é€‰åŒºæ¡†çš„å¤§å°ï¼Œå±…ä¸­æ˜¾ç¤ºï¼Œè¦†ç›–setCropperMarginæ–¹æ³•
 	 * @param w
 	 * @param h
 	 */
